@@ -1,0 +1,4 @@
+python <= 3.10
+pyyaml
+selenium >=4.0.0
+ddddocr
