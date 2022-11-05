@@ -4,10 +4,11 @@
 
 ## 配置
 
-注意`python<=3.10`!!
+**注意`python<=3.10`!!**
 1. `git clone ...`
 2. `pip install requirements.txt`
-3. 編輯`profile.yml`裡的`name` `password` `even_id`
+3. 下載`chromedriver`並加到`PATH`
+3. 編輯`profile.yml`裡的`name`,`password`,`even_id`
 
 
 ## 執行
