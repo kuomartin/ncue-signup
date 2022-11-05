@@ -4,31 +4,24 @@ from selenium import webdriver
 import time
 from concurrent.futures.thread import ThreadPoolExecutor
 import asyncio
-import sys
-import os
 import yaml
 
-with open('profile.yml','r') as stream:
-    profile=yaml.safe_load(stream)
+with open('profile.yml', 'r') as stream:
+    profile = yaml.safe_load(stream)
 
 
 login_url = profile['login_url']
 even_id = profile['even_id']
 name = profile['user']['name']
 passwd = profile['user']['password']
-headless=profile['headless']
-sys.stdout = sys.stderr = open(os.devnull, "a", encoding='UTF-8')
+headless = profile['headless']
 ocr = ddddocr.DdddOcr()
-
 options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
-if headless:options.add_argument('--headless')
+if headless:
+    options.add_argument('--headless')
 options.add_argument('--disable-dev-shm-usage')
-
-
 driver = webdriver.Chrome('chromedriver', options=options)
-
-driver.quit()
 
 
 def main(url):
