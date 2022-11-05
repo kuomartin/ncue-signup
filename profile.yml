@@ -1,8 +1,8 @@
 login_url : https://apss.ncue.edu.tw/sign_up/sign_app.php
-even_id : 46607
+even_id : [46607]
 
 user:
   name : YOUR_NAME
-  passeord : PASSWORD
+  password : PASSWORD
 
 headless : false
